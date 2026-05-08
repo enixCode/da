@@ -1,4 +1,4 @@
-# Changelog — direction artistique enixCode
+# Changelog - direction artistique enixCode
 
 Toutes les modifications notables de la DA sont documentées ici. Format inspiré de [Keep a Changelog](https://keepachangelog.com/), versionning SemVer.
 
@@ -9,7 +9,7 @@ Ajouter une entrée :
 
 ---
 
-## [0.1.0] — 2026-05-08
+## [0.1.0] - 2026-05-08
 
 ### Added
 - Palette **Ardoise Froide** (light + dark) avec 12 tokens sémantiques + 2 constants
@@ -24,16 +24,16 @@ Ajouter une entrée :
 - Brand book visuel (`index.html`)
 
 ### Consumers
-- `enix/plugins` (marketplace Claude Code) — premier site à appliquer la palette
+- `enix/plugins` (marketplace Claude Code) - premier site à appliquer la palette
 
 ### Notes
 - Repo créé. Direction artistique inspirée des palettes infrastructure (Railway, Fly.io, Stripe), avec une typographie swiss modernist (Archivo Narrow + Fraunces italic).
-- Le rouge signal de l'ancienne palette `enix/plugins` (#ff2d2d) a été abandonné — créait de l'anxiété inconsciente dans un contexte dev tool (rouge = erreur).
+- Le rouge signal de l'ancienne palette `enix/plugins` (#ff2d2d) a été abandonné - créait de l'anxiété inconsciente dans un contexte dev tool (rouge = erreur).
 - Pas de logo défini à ce stade. À compléter quand un wordmark / logomark sera finalisé.
 
 ### Tooling
 - Style Dictionary v5.4 ajouté pour générer les outputs cross-platform depuis `tokens.json`
-- Outputs : CSS (light/dark séparés + flat), SCSS, JS, iOS Swift, Android XML — tous dans `dist/`
+- Outputs : CSS (light/dark séparés + flat), SCSS, JS, iOS Swift, Android XML - tous dans `dist/`
 - Le `tokens.css` racine reste hand-written (pour préserver les `@media` queries proprement)
 
 ---
@@ -42,8 +42,8 @@ Ajouter une entrée :
 
 Idées d'évolutions futures, à valider avant inclusion.
 
-- `LOGO.md` — wordmark / logomark / icon variants quand le logo sera finalisé
-- `iconography.md` — système d'icônes (probablement Lucide ou custom monoline)
+- `LOGO.md` - wordmark / logomark / icon variants quand le logo sera finalisé
+- `iconography.md` - système d'icônes (probablement Lucide ou custom monoline)
 - Migration W3C DTCG complet + Style Dictionary si > 3 consumers actifs
 - Publication `@enixcode/da-tokens` sur npm
 - Ajout d'un script de validation automatique des contrastes (CI)

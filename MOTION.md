@@ -1,4 +1,4 @@
-# Motion — principes enixCode
+# Motion - principes enixCode
 
 Le mouvement enixCode est **fonctionnel, jamais décoratif**. Il sert à communiquer un changement d'état, jamais à attirer l'œil. Si on retire toute l'animation et que le produit reste compréhensible, alors la motion est correcte.
 
@@ -132,6 +132,6 @@ Si tu ajoutes une animation custom dans un produit consumer, ajoute son nom + sa
 
 ## Références
 
-- [IBM Carbon — Motion](https://carbondesignsystem.com/elements/motion/overview/)
-- [Material Design — Motion](https://m3.material.io/styles/motion/overview)
-- [Easings.net](https://easings.net/) — bibliothèque visuelle de courbes d'easing
+- [IBM Carbon - Motion](https://carbondesignsystem.com/elements/motion/overview/)
+- [Material Design - Motion](https://m3.material.io/styles/motion/overview)
+- [Easings.net](https://easings.net/) - bibliothèque visuelle de courbes d'easing

@@ -1,8 +1,20 @@
-# da — direction artistique enixCode
+# da - direction artistique enixCode
 
 Source de vérité pour l'identité visuelle d'enixCode : palette, typographie, voix, tokens, anti-patterns.
 
 Ce repo est consommé par tous les sites et produits enixCode. Avant de modifier une couleur ou un poids de police localement dans un projet, mets-le à jour ici d'abord.
+
+## Pour appliquer cette DA
+
+Si tu construis quelque chose pour enixCode (site, app, doc, README), lis ces fichiers **avant** de toucher à du CSS ou d'écrire du copy :
+
+1. [PALETTE.md](PALETTE.md) - quelles couleurs utiliser, lesquelles éviter, ratios de contraste
+2. [TYPOGRAPHY.md](TYPOGRAPHY.md) - les 4 familles autorisées, échelle, anti-patterns
+3. [VOICE.md](VOICE.md) - ton, vocabulaire, mots bannis. **Notamment : jamais d'em-dash, jamais de "the future of...", jamais d'emoji dans le UI.**
+4. [ACCESSIBILITY.md](ACCESSIBILITY.md) - engagement WCAG 2.2 AA non négociable
+5. [MOTION.md](MOTION.md) - seulement si tu ajoutes des animations
+
+Le tableau ci-dessous est l'index complet. Pas un substitut à la lecture des fichiers.
 
 ## Contenu
 
@@ -17,9 +29,9 @@ Ce repo est consommé par tous les sites et produits enixCode. Avant de modifier
 | [tokens.css](tokens.css) | Variables CSS prêtes à `@import` (web, hand-written, avec @media) |
 | [tokens.json](tokens.json) | Source de vérité W3C DTCG (lu par Style Dictionary) |
 | [config.mjs](config.mjs) | Config Style Dictionary pour générer `dist/` |
-| [dist/](dist/) | Outputs générés (CSS, SCSS, JS, Swift, Android) — ne pas éditer |
+| [dist/](dist/) | Outputs générés (CSS, SCSS, JS, Swift, Android) - ne pas éditer |
 | [CONSUMERS.md](CONSUMERS.md) | Liste des projets qui consomment cette DA |
-| [index.html](index.html) | Brand book visuel — ouvre-le dans un navigateur |
+| [index.html](index.html) | Brand book visuel - ouvre-le dans un navigateur |
 
 ## Pour démarrer
 
@@ -67,18 +79,18 @@ Toute modif des tokens doit être documentée dans [CONSUMERS.md](CONSUMERS.md) 
 
 Fonts chargées via Google Fonts sous **SIL Open Font License 1.1** :
 
-- **Archivo**, **Archivo Narrow** — Omnibus-Type
-- **Fraunces** — Undercase Type
-- **JetBrains Mono** — JetBrains
+- **Archivo**, **Archivo Narrow** - Omnibus-Type
+- **Fraunces** - Undercase Type
+- **JetBrains Mono** - JetBrains
 
 Aucune obligation juridique tant que les fonts sont servies par le CDN Google Fonts. Si self-host un jour, inclure `OFL.txt` à côté des fichiers `.woff2` et préserver les copyright notices des auteurs.
 
 Tooling :
 
-- **Style Dictionary** (Apache 2.0) — génère les outputs cross-platform depuis `tokens.json`
+- **Style Dictionary** (Apache 2.0) - génère les outputs cross-platform depuis `tokens.json`
 
 ## Licence
 
-**MIT** — copiez, modifiez, utilisez ce que vous voulez. Voir [LICENSE](LICENSE).
+**MIT** - copiez, modifiez, utilisez ce que vous voulez. Voir [LICENSE](LICENSE).
 
 Si cette direction artistique vous inspire, le compliment est bienvenu, l'attribution n'est pas requise (mais appréciée).

@@ -1,4 +1,4 @@
-# Palette — Ardoise Froide
+# Palette - Ardoise Froide
 
 Direction chromatique principale d'enixCode. Inspiration : palette infrastructure (Railway, Fly.io, Stripe). Volonté : précision technique, autorité, pas de fluff.
 
@@ -8,7 +8,7 @@ Direction chromatique principale d'enixCode. Inspiration : palette infrastructur
 
 Le bleu calibré (`#2563eb`) est la signature. Pas le bleu Vercel cliché (`#0070f3`), pas le bleu corporate générique. Un bleu dense, légèrement froid, qui ne crie pas.
 
-## Tokens — light
+## Tokens - light
 
 | Nom | Hex | OKLCH | Rôle | Sur quoi |
 |---|---|---|---|---|
@@ -25,7 +25,7 @@ Le bleu calibré (`#2563eb`) est la signature. Pas le bleu Vercel cliché (`#007
 | `mark-bg` | `#111318` | identique `ink` | Fond CTA / install | Boutons primaires, blocs install |
 | `mark-fg` | `#f8f9fa` | identique `paper` | Texte sur CTA | Texte des boutons primaires |
 
-## Tokens — dark
+## Tokens - dark
 
 | Nom | Hex | Rôle |
 |---|---|---|
@@ -44,7 +44,7 @@ Le bleu calibré (`#2563eb`) est la signature. Pas le bleu Vercel cliché (`#007
 
 ## Constants (jamais inversés)
 
-Pour les éléments dont la couleur ne doit pas varier entre light et dark — par exemple texte sur badge jaune.
+Pour les éléments dont la couleur ne doit pas varier entre light et dark - par exemple texte sur badge jaune.
 
 | Nom | Hex | Rôle |
 |---|---|---|

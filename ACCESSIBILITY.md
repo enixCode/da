@@ -1,4 +1,4 @@
-# Accessibilité — engagement enixCode
+# Accessibilité - engagement enixCode
 
 L'accessibilité n'est pas un bonus optionnel. Tout produit enixCode public engage le niveau **WCAG 2.2 AA minimum** sur l'ensemble des contenus.
 
@@ -19,7 +19,7 @@ L'accessibilité n'est pas un bonus optionnel. Tout produit enixCode public enga
 | Hiérarchie heading correcte | H1 unique, H2 sections, pas de skip | Audit Lighthouse |
 | ARIA labels sur boutons sans texte visible | Présents | Audit manuel |
 
-## Focus states — spec visuelle
+## Focus states - spec visuelle
 
 Tout élément interactif (`button`, `a`, `input`, `details > summary`, `[tabindex]`) doit avoir un focus visible distinct du hover.
 
@@ -30,7 +30,7 @@ Tout élément interactif (`button`, `a`, `input`, `details > summary`, `[tabind
 }
 ```
 
-- Couleur : `var(--hot)` (#2563eb light / #60a5fa dark) — toujours l'accent primaire de la palette, jamais une couleur custom.
+- Couleur : `var(--hot)` (#2563eb light / #60a5fa dark) - toujours l'accent primaire de la palette, jamais une couleur custom.
 - Épaisseur : 2px minimum.
 - Offset : 2px (l'outline ne touche pas le bord de l'élément, plus visible).
 - Pas de `outline: none` sans remplacement explicite par un `box-shadow` ou un `border` équivalent.
@@ -61,7 +61,7 @@ Si une animation est *essentielle* à la compréhension (rare), prévoir une alt
 
 Avant qu'un produit enixCode soit déployé en public :
 
-1. **Audit Lighthouse** dans Chrome DevTools (mode mobile + desktop) — viser score Accessibility ≥ 95
+1. **Audit Lighthouse** dans Chrome DevTools (mode mobile + desktop) - viser score Accessibility ≥ 95
 2. **Test clavier complet** : naviguer la page entière sans souris, vérifier que tous les CTAs sont atteignables et activables
 3. **Test contraste** : passer chaque paire token color/background dans WebAIM
 4. **Test reduced motion** : activer `prefers-reduced-motion` (Windows : Settings > Accessibility > Visual Effects > Animation effects = OFF) et vérifier qu'aucune animation ne tourne
@@ -85,6 +85,6 @@ Tout PR ou modification d'un produit enixCode doit passer la checklist ci-dessus
 
 ## Références
 
-- [WCAG 2.2 — W3C](https://www.w3.org/WAI/WCAG22/quickref/)
+- [WCAG 2.2 - W3C](https://www.w3.org/WAI/WCAG22/quickref/)
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [Inclusive Components — Heydon Pickering](https://inclusive-components.design/)
+- [Inclusive Components - Heydon Pickering](https://inclusive-components.design/)

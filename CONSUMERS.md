@@ -1,4 +1,4 @@
-# Consumers — projets utilisant cette DA
+# Consumers - projets utilisant cette DA
 
 Liste des projets enixCode qui consomment la direction artistique. Quand on modifie un token, vérifier l'impact sur chaque projet listé.
 
@@ -19,7 +19,7 @@ Quand un token change ici :
 
 ## Versioning des tokens
 
-Pas de package npm pour l'instant — les tokens sont copiés manuellement dans chaque projet. Si plus de 3 consumers actifs, considérer :
+Pas de package npm pour l'instant - les tokens sont copiés manuellement dans chaque projet. Si plus de 3 consumers actifs, considérer :
 
 - Publier `@enixcode/da-tokens` sur npm (CSS + JSON)
 - Migrer vers W3C Design Tokens Format avec Style Dictionary

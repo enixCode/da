@@ -1,4 +1,4 @@
-// Style Dictionary config — enixCode DA
+// Style Dictionary config - enixCode DA
 // Source : tokens.json (W3C DTCG)
 // Output : dist/{css,scss,js,ios,android}/
 

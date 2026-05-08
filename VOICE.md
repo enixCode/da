@@ -1,4 +1,4 @@
-# Voix — enixCode
+# Voix - enixCode
 
 Comment on écrit. Pas un manifeste de marque, juste les règles qui guident le ton.
 
@@ -22,7 +22,7 @@ Les labels d'UI (badges, méta, footer) sont en lowercase ou small-caps. Cohére
 
 ### Pas d'em-dash
 
-Jamais `—`. Utiliser `-` (hyphen) ou la virgule. C'est une règle de l'écriture enixCode, héritée des CLAUDE.md du créateur. Vaut pour le code, les commits, la communication.
+Jamais `-`. Utiliser `-` (hyphen) ou la virgule. C'est une règle de l'écriture enixCode, héritée des CLAUDE.md du créateur. Vaut pour le code, les commits, la communication.
 
 ### Build with cc
 
@@ -87,7 +87,7 @@ Termes officiels enixCode. Capitalisation imposée. Mots interdits.
 - "delightful" → AI slop 2024
 - Emojis dans les commits, README, sites publics
 
-## Imagery — direction explicite
+## Imagery - direction explicite
 
 **Décision** : pas d'illustration, pas de photographie, pas de vidéo dans le UI public enixCode. Ni stock, ni custom.
 

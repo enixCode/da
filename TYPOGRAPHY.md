@@ -1,4 +1,4 @@
-# Typographie — swiss modernist
+# Typographie - swiss modernist
 
 Trois familles. Chacune a un rôle strict. Ne jamais les mélanger sur la même ligne.
 
