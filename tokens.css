@@ -1,0 +1,79 @@
+/* ==========================================================================
+   da/tokens.css — direction artistique enixCode
+   Palette : Ardoise Froide
+   Source de vérité : github.com/enixCode/da (privé)
+   Voir PALETTE.md pour les rôles sémantiques.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces */
+  --paper:     #f8f9fa;
+  --paper-2:   #edeef0;
+  --paper-3:   #e1e3e6;
+
+  /* Texte */
+  --ink:       #111318;
+  --ink-soft:  #34373d;
+  --muted:     #6b7280;
+
+  /* Bordures */
+  --rule:       #111318;
+  --rule-soft:  #c8cbd0;
+
+  /* Accents */
+  --hot:     #2563eb;  /* bleu primaire calibré */
+  --blue:    #2563eb;  /* alias sémantique */
+  --yellow:  #60a5fa;  /* bleu clair, pour highlights "$" */
+
+  /* Marqués (CTAs, install blocks). Ne s'inversent pas en dark mode :
+     restent sombre-sur-clair pour préserver les accents. */
+  --mark-bg:  #111318;
+  --mark-fg:  #f8f9fa;
+
+  /* Constants : ne s'inversent jamais (texte sur badges colorés) */
+  --constant-ink:    #111318;
+  --constant-paper:  #f8f9fa;
+
+  /* Détails */
+  --grid-line: rgba(17, 19, 24, 0.04);
+}
+
+/* Dark mode système (sauf override par data-theme="light") */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:     #0d0e12;
+    --paper-2:   #13141a;
+    --paper-3:   #1a1c24;
+    --ink:       #e8eaf0;
+    --ink-soft:  #b8bac2;
+    --muted:     #7d8390;
+    --rule:       #e8eaf0;
+    --rule-soft:  #2a2d35;
+    --hot:     #60a5fa;
+    --blue:    #60a5fa;
+    --yellow:  #93c5fd;
+    --mark-bg:  #1a1c24;
+    --mark-fg:  #e8eaf0;
+    --grid-line: rgba(232, 234, 240, 0.04);
+  }
+}
+
+/* Dark mode forcé via data-theme="dark" */
+:root[data-theme="dark"] {
+  --paper:     #0d0e12;
+  --paper-2:   #13141a;
+  --paper-3:   #1a1c24;
+  --ink:       #e8eaf0;
+  --ink-soft:  #b8bac2;
+  --muted:     #7d8390;
+  --rule:       #e8eaf0;
+  --rule-soft:  #2a2d35;
+  --hot:     #60a5fa;
+  --blue:    #60a5fa;
+  --yellow:  #93c5fd;
+  --mark-bg:  #1a1c24;
+  --mark-fg:  #e8eaf0;
+  --grid-line: rgba(232, 234, 240, 0.04);
+}

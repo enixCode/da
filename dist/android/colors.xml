@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Do not edit directly, this file was auto-generated.
+-->
+<resources>
+  <color name="color_light_paper">#fff8f9fa</color>
+  <color name="color_light_paper_2">#ffedeef0</color>
+  <color name="color_light_paper_3">#ffe1e3e6</color>
+  <color name="color_light_ink">#ff111318</color>
+  <color name="color_light_ink_soft">#ff34373d</color>
+  <color name="color_light_muted">#ff6b7280</color>
+  <color name="color_light_rule">#ff111318</color>
+  <color name="color_light_rule_soft">#ffc8cbd0</color>
+  <color name="color_light_hot">#ff2563eb</color>
+  <color name="color_light_blue">#ff2563eb</color>
+  <color name="color_light_yellow">#ff60a5fa</color>
+  <color name="color_light_mark_bg">#ff111318</color>
+  <color name="color_light_mark_fg">#fff8f9fa</color>
+  <color name="color_constants_constant_ink">#ff111318</color>
+  <color name="color_constants_constant_paper">#fff8f9fa</color>
+</resources>

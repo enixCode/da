@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>da — direction artistique enixCode</title>
+<meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0d0e12" media="(prefers-color-scheme: dark)" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Narrow:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="tokens.css" />
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--hot); color: var(--mark-fg); }
+
+/* layout */
+.frame {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* topbar */
+.topbar {
+  border-bottom: 2px solid var(--rule);
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 50;
+}
+.topbar .left { display: flex; gap: 14px; align-items: center; }
+.topbar .dot { width: 8px; height: 8px; background: var(--hot); display: inline-block; }
+.topbar .right { color: var(--muted); }
+
+/* hero */
+.hero {
+  padding: 56px 0 40px;
+  border-bottom: 4px solid var(--rule);
+}
+.hero h1 {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero h1 .ital {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 0.78em;
+  color: var(--hot);
+}
+.hero .lead {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(16px, 1.6vw, 21px);
+  line-height: 1.35;
+  max-width: 50ch;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.hero .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: 'Archivo Narrow', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.hero .meta b { color: var(--ink); font-weight: 700; }
+
+/* section */
+section.s {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.s-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 32px;
+}
+.s-head h2 {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+}
+.s-head .num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+}
+.s-head .num b { color: var(--hot); font-weight: 600; font-style: normal; }
+
+/* palette grid */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.swatch {
+  border: 1px solid var(--rule-soft);
+  display: flex;
+  flex-direction: column;
+}
+.swatch .chip {
+  height: 110px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.swatch .info {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--paper);
+}
+.swatch .name {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.swatch .hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.swatch .role {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.swatch.alt .info { background: var(--paper-2); }
+
+/* typography samples */
+.typo-sample {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px dashed var(--rule-soft);
+}
+.typo-sample:last-child { border-bottom: none; padding-bottom: 0; }
+.typo-sample .role {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.typo-sample .meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.t-display {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+.t-body {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.t-accent {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  max-width: 46ch;
+  color: var(--ink);
+}
+.t-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--paper-3);
+  padding: 12px 16px;
+  display: inline-block;
+}
+
+/* components */
+.comp-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+.comp-label {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.btn-primary {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  background: var(--mark-bg);
+  color: var(--mark-fg);
+  padding: 12px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary::after { content: '↗'; font-family: 'Archivo', sans-serif; font-size: 16px; }
+.btn-primary:hover { background: var(--hot); }
+.btn-secondary {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 2px;
+}
+.badge {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  padding: 4px 10px;
+  border: 1.5px solid var(--ink);
+  text-transform: uppercase;
+}
+.badge.full { background: var(--hot); color: var(--constant-paper); border-color: var(--hot); }
+.badge.solo { background: var(--yellow); color: var(--constant-ink); border-color: var(--constant-ink); }
+.cmd-block {
+  display: flex;
+  background: var(--mark-bg);
+  color: var(--mark-fg);
+  max-width: 540px;
+}
+.cmd-block .cmd {
+  flex: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 16px;
+}
+.cmd-block .cmd::before { content: '$ '; color: var(--yellow); }
+.cmd-block .copy {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 12px 18px;
+  background: var(--mark-fg);
+  color: var(--mark-bg);
+  border-left: 2px solid var(--mark-bg);
+}
+
+/* rules grid (do / dont) */
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.rules > div {
+  border-top: 4px solid var(--rule);
+  padding-top: 20px;
+}
+.rules h3 {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  margin-bottom: 14px;
+}
+.rules h3.do { color: var(--hot); }
+.rules h3.dont { color: var(--muted); }
+.rules ul {
+  list-style: none;
+}
+.rules li {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.rules li:last-child { border-bottom: none; }
+.rules li::before {
+  content: '·  ';
+  font-weight: 700;
+}
+.rules h3.do + ul li::before { content: '+ '; color: var(--hot); }
+.rules h3.dont + ul li::before { content: '× '; color: var(--muted); }
+
+/* footer */
+footer {
+  padding: 32px;
+  font-family: 'Archivo Narrow', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 4px solid var(--rule);
+}
+
+@media (max-width: 720px) {
+  .frame { padding: 0 18px; }
+  .topbar { padding: 10px 18px; }
+  .rules { grid-template-columns: 1fr; }
+  .t-display { font-size: 44px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="left">
+    <span class="dot"></span>
+    <span>enixCode</span>
+    <span>/ da</span>
+  </div>
+  <div class="right">brand book · v0.1</div>
+</header>
+
+<main class="frame">
+
+  <section class="hero">
+    <h1>direction <span class="ital">/</span> artistique</h1>
+    <p class="lead">Source de vérité visuelle pour tous les projets enixCode. Palette, typographie, voix, anti-patterns. À ouvrir avant de toucher au CSS d'un site.</p>
+    <div class="meta">
+      <span><b>palette</b> ardoise froide</span>
+      <span><b>v</b> 0.1</span>
+      <span>maintenue par <b>enixCode</b></span>
+      <span>updated <b>may 2026</b></span>
+    </div>
+  </section>
+
+  <section class="s" id="palette">
+    <div class="s-head">
+      <h2>// 01 — Palette</h2>
+      <span class="num">12 tokens · light + dark</span>
+    </div>
+
+    <p style="font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--ink);max-width:64ch;margin-bottom:32px;">Bleu calibré. Pas le bleu Vercel cliché, pas le bleu corporate générique. Un bleu dense, légèrement froid, qui ne crie pas. Précision technique. Tout est délibéré.</p>
+
+    <div class="swatch-grid">
+      <div class="swatch"><div class="chip" style="background:#f8f9fa;border-bottom-color:#c8cbd0;"></div><div class="info"><span class="name">paper</span><span class="hex">#f8f9fa</span><span class="role">Fond principal</span></div></div>
+      <div class="swatch alt"><div class="chip" style="background:#edeef0;"></div><div class="info"><span class="name">paper-2</span><span class="hex">#edeef0</span><span class="role">Fond alterné (cards)</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#e1e3e6;"></div><div class="info"><span class="name">paper-3</span><span class="hex">#e1e3e6</span><span class="role">Surface élevée</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#111318;"></div><div class="info"><span class="name">ink</span><span class="hex">#111318</span><span class="role">Texte principal</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#34373d;"></div><div class="info"><span class="name">ink-soft</span><span class="hex">#34373d</span><span class="role">Texte secondaire</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#6b7280;"></div><div class="info"><span class="name">muted</span><span class="hex">#6b7280</span><span class="role">Métadonnées, timestamps</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#2563eb;"></div><div class="info"><span class="name">hot · blue</span><span class="hex">#2563eb</span><span class="role">Accent primaire</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#60a5fa;"></div><div class="info"><span class="name">yellow</span><span class="hex">#60a5fa</span><span class="role">Accent secondaire (highlights)</span></div></div>
+      <div class="swatch"><div class="chip" style="background:#c8cbd0;"></div><div class="info"><span class="name">rule-soft</span><span class="hex">#c8cbd0</span><span class="role">Bordures discrètes</span></div></div>
+    </div>
+  </section>
+
+  <section class="s" id="typography">
+    <div class="s-head">
+      <h2>// 02 — Typographie</h2>
+      <span class="num">3 familles, 1 mono, 0 surplus</span>
+    </div>
+
+    <div class="typo-sample">
+      <div class="role">Display · Archivo Narrow 900</div>
+      <div class="t-display">enix / plugins</div>
+      <div class="meta">family: Archivo Narrow · weight: 900 · letter-spacing: -0.035em · line-height: 0.92</div>
+    </div>
+
+    <div class="typo-sample">
+      <div class="role">Accent · Fraunces italic 400</div>
+      <p class="t-accent">A small, opinionated marketplace for Claude Code. Lean tools. No fluff. Read the source.</p>
+      <div class="meta">family: Fraunces · weight: 400 · style: italic · usage: tagline, accent éditorial court</div>
+    </div>
+
+    <div class="typo-sample">
+      <div class="role">Body · Archivo 400</div>
+      <p class="t-body" style="max-width:60ch;">A lightweight DAG workflow engine. Orchestrates code that runs in Docker containers, connected by links with conditions. Container execution is delegated to a separate light-run HTTP service.</p>
+      <div class="meta">family: Archivo · weight: 400 · size: 16px · line-height: 1.55</div>
+    </div>
+
+    <div class="typo-sample">
+      <div class="role">Mono · JetBrains Mono 500</div>
+      <div class="t-mono">/plugin install light-process@enix</div>
+      <div class="meta">family: JetBrains Mono · weight: 500 · usage: code, commandes shell, identifiants</div>
+    </div>
+  </section>
+
+  <section class="s" id="components">
+    <div class="s-head">
+      <h2>// 03 — Composants</h2>
+      <span class="num">primitives qui apparaissent partout</span>
+    </div>
+
+    <div class="comp-row">
+      <div>
+        <div class="comp-label">Bouton primaire</div>
+        <button class="btn-primary">Open project</button>
+      </div>
+      <div>
+        <div class="comp-label">Bouton secondaire</div>
+        <a href="#" class="btn-secondary">Read docs</a>
+      </div>
+    </div>
+
+    <div class="comp-row">
+      <div>
+        <div class="comp-label">Badge primaire</div>
+        <span class="badge full">plugin + cli</span>
+      </div>
+      <div>
+        <div class="comp-label">Badge secondaire</div>
+        <span class="badge solo">plugin</span>
+      </div>
+      <div>
+        <div class="comp-label">Badge outline</div>
+        <span class="badge">repo pending</span>
+      </div>
+    </div>
+
+    <div class="comp-row">
+      <div style="flex:1;min-width:280px;">
+        <div class="comp-label">Install command</div>
+        <div class="cmd-block">
+          <span class="cmd">/plugin install light-process@enix</span>
+          <span class="copy">copy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="rules">
+    <div class="s-head">
+      <h2>// 04 — Règles d'usage</h2>
+      <span class="num"><b>Do.</b> Don't.</span>
+    </div>
+
+    <div class="rules">
+      <div>
+        <h3 class="do">Do — palette</h3>
+        <ul>
+          <li>Un seul accent <code style="font-family:'JetBrains Mono',monospace;background:var(--paper-3);padding:1px 6px;">hot</code> par vue principale</li>
+          <li>Couleurs plates, jamais de gradient</li>
+          <li>Vérifier le contraste WCAG AA avant de valider</li>
+          <li>Les CTAs (boutons primaires, install blocks) restent sombres en dark mode pour préserver les accents bleu et yellow</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="dont">Don't — palette</h3>
+        <ul>
+          <li>Pas de hex hors de la liste sans mise à jour de PALETTE.md</li>
+          <li>Pas de violet (cramé par l'AI slop 2023-2024)</li>
+          <li>Pas de rouge signal pour les actions principales (rouge = erreur)</li>
+          <li>Pas de yellow comme couleur d'action — c'est un highlight, pas un CTA</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="do">Do — typographie</h3>
+        <ul>
+          <li>Trois registres maximum sur une page : Archivo Narrow, Fraunces italic, JetBrains Mono</li>
+          <li>Italic uniquement pour les accents courts (taglines)</li>
+          <li>Letter-spacing négatif sur les gros titres condensés</li>
+          <li>Letter-spacing positif (0.16-0.2em) sur les labels uppercase</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="dont">Don't — typographie</h3>
+        <ul>
+          <li>Pas d'italique sur du body texte multi-lignes (illisibilité dyslexie)</li>
+          <li>Pas de mono dans les paragraphes</li>
+          <li>Pas de 4e font "pour varier"</li>
+          <li>Pas d'em-dash (—) jamais</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="do">Do — voix</h3>
+        <ul>
+          <li>Direct, factuel, pas de marketing</li>
+          <li>Imperatives sur les CTAs ("Install once", "Open project")</li>
+          <li>Lowercase pour les labels système</li>
+          <li>Build with cc en trailer de commit</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="dont">Don't — voix</h3>
+        <ul>
+          <li>Pas de "the future of...", "revolutionary", "10x faster"</li>
+          <li>Pas de stats sans source ni de citations sans auteur</li>
+          <li>Pas de décoration creuse type "vol. 01" ou "chapter 02"</li>
+          <li>Pas de stock photos, pas d'illustrations isométriques</li>
+          <li>Pas d'emoji dans le UI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="anti-patterns" style="border-bottom:none;">
+    <div class="s-head">
+      <h2>// 05 — Anti-patterns visuels</h2>
+      <span class="num">à ne jamais reproduire</span>
+    </div>
+    <ul style="list-style:none;">
+      <li style="padding:14px 0;border-bottom:1px dashed var(--rule-soft);font-size:15px;color:var(--ink-soft);"><b style="color:var(--ink);">Watermarks géants en filigrane.</b> Mangent l'espace utile, dégradent le contraste, sentent le mood-board AI.</li>
+      <li style="padding:14px 0;border-bottom:1px dashed var(--rule-soft);font-size:15px;color:var(--ink-soft);"><b style="color:var(--ink);">Hero qui prend 75% du viewport.</b> Le pattern "above the fold" pour un site dev = titre court + 1.5 cards visibles.</li>
+      <li style="padding:14px 0;border-bottom:1px dashed var(--rule-soft);font-size:15px;color:var(--ink-soft);"><b style="color:var(--ink);">Gradients violets indigo.</b> Signal universel "encore un wrapper GPT" depuis 2023.</li>
+      <li style="padding:14px 0;border-bottom:1px dashed var(--rule-soft);font-size:15px;color:var(--ink-soft);"><b style="color:var(--ink);">Toggle sun/moon décoratifs.</b> Préférer un toggle <code style="font-family:'JetBrains Mono',monospace;background:var(--paper-3);padding:1px 6px;">auto / light / dark</code> textuel.</li>
+      <li style="padding:14px 0;font-size:15px;color:var(--ink-soft);"><b style="color:var(--ink);">Numérotation décorative.</b> "Vol. 01", "Chapter II" — bruit cognitif sans information.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>enixCode/da · brand book v0.1</span>
+    <span>maintained manually</span>
+  </footer>
+
+</main>
+
+</body>
+</html>

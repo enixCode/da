@@ -1,0 +1,15 @@
+{
+  "name": "@enixcode/da",
+  "version": "0.1.0",
+  "description": "Direction artistique enixCode - tokens, palette, typographie, voix.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "style-dictionary build --config config.mjs",
+    "clean": "node -e \"import('node:fs').then(f=>f.rmSync('dist',{recursive:true,force:true}))\"",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.4.0"
+  }
+}

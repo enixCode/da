@@ -1,0 +1,42 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-light-paper: #f8f9fa;
+  --color-light-paper-2: #edeef0;
+  --color-light-paper-3: #e1e3e6;
+  --color-light-ink: #111318;
+  --color-light-ink-soft: #34373d;
+  --color-light-muted: #6b7280;
+  --color-light-rule: #111318;
+  --color-light-rule-soft: #c8cbd0;
+  --color-light-hot: #2563eb;
+  --color-light-blue: #2563eb;
+  --color-light-yellow: #60a5fa;
+  --color-light-mark-bg: #111318;
+  --color-light-mark-fg: #f8f9fa;
+  --color-dark-paper: #0d0e12;
+  --color-dark-paper-2: #13141a;
+  --color-dark-paper-3: #1a1c24;
+  --color-dark-ink: #e8eaf0;
+  --color-dark-ink-soft: #b8bac2;
+  --color-dark-muted: #7d8390;
+  --color-dark-rule: #e8eaf0;
+  --color-dark-rule-soft: #2a2d35;
+  --color-dark-hot: #60a5fa;
+  --color-dark-blue: #60a5fa;
+  --color-dark-yellow: #93c5fd;
+  --color-dark-mark-bg: #1a1c24;
+  --color-dark-mark-fg: #e8eaf0;
+  --color-constants-constant-ink: #111318;
+  --color-constants-constant-paper: #f8f9fa;
+  --typography-family-display: 'Archivo Narrow', system-ui, sans-serif;
+  --typography-family-body: Archivo, system-ui, sans-serif;
+  --typography-family-accent: Fraunces, serif;
+  --typography-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --typography-weight-regular: 400;
+  --typography-weight-medium: 500;
+  --typography-weight-bold: 700;
+  --typography-weight-black: 900;
+}
