@@ -11,8 +11,10 @@ Si tu construis quelque chose pour enixCode (site, app, doc, README), lis ces fi
 1. [PALETTE.md](PALETTE.md) - quelles couleurs utiliser, lesquelles éviter, ratios de contraste
 2. [TYPOGRAPHY.md](TYPOGRAPHY.md) - les 4 familles autorisées, échelle, anti-patterns
 3. [VOICE.md](VOICE.md) - ton, vocabulaire, mots bannis. **Notamment : jamais d'em-dash, jamais de "the future of...", jamais d'emoji dans le UI.**
-4. [ACCESSIBILITY.md](ACCESSIBILITY.md) - engagement WCAG 2.2 AA non négociable
-5. [MOTION.md](MOTION.md) - seulement si tu ajoutes des animations
+4. [LAYOUT.md](LAYOUT.md) - spacing scale, breakpoints, container, grille
+5. [COMPONENTS.md](COMPONENTS.md) - Button, Badge, Install block, Card, Topbar, Hero
+6. [ACCESSIBILITY.md](ACCESSIBILITY.md) - engagement WCAG 2.2 AA non négociable
+7. [MOTION.md](MOTION.md) - seulement si tu ajoutes des animations
 
 Le tableau ci-dessous est l'index complet. Pas un substitut à la lecture des fichiers.
 
@@ -25,6 +27,8 @@ Le tableau ci-dessous est l'index complet. Pas un substitut à la lecture des fi
 | [VOICE.md](VOICE.md) | Principes d'écriture, ton par contexte, vocabulaire, imagery, anti-patterns |
 | [ACCESSIBILITY.md](ACCESSIBILITY.md) | Engagement WCAG 2.2 AA, focus states, touch targets, méthode de test |
 | [MOTION.md](MOTION.md) | Productive vs expressive motion, tokens de durée, easing, anti-patterns |
+| [LAYOUT.md](LAYOUT.md) | Spacing scale (4-80px), breakpoints, container max-widths, grille, z-index |
+| [COMPONENTS.md](COMPONENTS.md) | Patterns Button, Badge, Install block, Card, Topbar, Hero avec anatomy + states |
 | [CHANGELOG.md](CHANGELOG.md) | Versions de la DA, ajouts, modifs, consumers impactés |
 | [tokens.css](tokens.css) | Variables CSS prêtes à `@import` (web, hand-written, avec @media) |
 | [tokens.json](tokens.json) | Source de vérité W3C DTCG (lu par Style Dictionary) |
@@ -35,14 +39,26 @@ Le tableau ci-dessous est l'index complet. Pas un substitut à la lecture des fi
 
 ## Pour démarrer
 
-Ouvre `index.html` dans un navigateur pour voir tout ça appliqué.
+Brand book live : **https://enixcode.github.io/da/** (servi par GitHub Pages).
+Index des docs : **https://enixcode.github.io/da/docs.html**.
+
+### URLs publiques (CDN Pages, recommandé)
+
+| Asset | URL |
+|---|---|
+| Tokens CSS racine | https://enixcode.github.io/da/tokens.css |
+| Tokens JSON (DTCG) | https://enixcode.github.io/da/tokens.json |
+| Tokens CSS générés | https://enixcode.github.io/da/dist/css/tokens.css |
+| Tokens JS | https://enixcode.github.io/da/dist/js/tokens.js |
+
+Headers corrects (`text/css`, `application/json`), pas de rate-limit utilisateur, CDN Fastly. À préférer aux URLs `raw.githubusercontent.com` qui restent disponibles mais sont rate-limitées et servies en `text/plain`.
 
 ### Web
 
 Utilise le `tokens.css` racine (hand-written, inclut `@media (prefers-color-scheme: dark)`) :
 
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/enixCode/da/main/tokens.css" />
+<link rel="stylesheet" href="https://enixcode.github.io/da/tokens.css" />
 ```
 
 Ou copie le bloc `:root` directement dans ton CSS.

@@ -4,7 +4,18 @@ Liste des projets enixCode qui consomment la direction artistique. Quand on modi
 
 | Projet | URL | Tokens version | Consommation | Notes |
 |---|---|---|---|---|
-| `enix/plugins` (marketplace) | https://enixcode.github.io/plugins/ | inline (copie de tokens.css) | tokens CSS dans `<style>` | Premier site à appliquer la palette Ardoise Froide |
+| `enix/plugins` (marketplace) | https://enixcode.github.io/plugins/ | 0.2.0 | `<link rel="stylesheet" href="https://enixcode.github.io/da/tokens.css">` | Premier site à appliquer la palette Ardoise Froide |
+
+## URLs publiques (à utiliser dans les consumers)
+
+Toujours préférer les URLs Pages aux URLs `raw.githubusercontent.com` :
+
+- https://enixcode.github.io/da/tokens.css (variables CSS hand-written)
+- https://enixcode.github.io/da/tokens.json (source DTCG)
+- https://enixcode.github.io/da/dist/css/tokens.css (généré)
+- https://enixcode.github.io/da/dist/js/tokens.js (généré)
+
+Les URLs raw restent fonctionnelles pour les anciens workflows, mais sont rate-limitées (~60 req/h non-auth) et servies en `text/plain`.
 
 ## Workflow de mise à jour
 

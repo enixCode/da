@@ -38,6 +38,19 @@ Ajouter une entrée :
 
 ---
 
+## [0.2.0] - 2026-05-08
+
+### Added
+- **LAYOUT.md** : spacing scale (4/8/12/16/24/32/48/64/80 px), breakpoints (Primer-aligned), container max-widths, grille 12 cols, z-index scale, anti-patterns
+- **COMPONENTS.md** : Button, Badge, Install command block, Card, Topbar, Hero. Pour chaque composant : description, variants, sizes, states (incl. focus-visible WCAG 2.2), anatomy ASCII, do/don't, accessibility notes, related
+- README mis à jour pour pointer vers les 2 nouveaux fichiers en étapes 4 et 5 de "Pour appliquer cette DA"
+
+### Notes
+- Inspiration recherchée chez Wise, Atlassian, Polaris, IBM Carbon, Primer, Material 3 (pas de templates AI)
+- Couvre maintenant tout ce qu'il faut pour construire un nouveau site enixCode sans dérive
+
+---
+
 ## Roadmap (non commité)
 
 Idées d'évolutions futures, à valider avant inclusion.
